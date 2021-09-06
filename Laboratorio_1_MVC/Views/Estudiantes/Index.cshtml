@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Laboratorio_1_MVC.Models.ClsEstudiantes>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        <h1><b>Lista de estudiantes de web II</b></h1>
+        <br />
+        <table border="1">
+            <tr>
+                <td>DNI</td>
+                <td>Nombre</td>
+                <td>Apellido</td>
+                <td>Edad</td>
+                <td>Talla</td>
+                <td>Sexo</td>
+
+            </tr>
+
+            @foreach (var elem in Model) 
+            { 
+                
+        <tr>
+            <td>@Html.DisplayFor(ModelItem => elem.dni) </td>
+            <td>@Html.DisplayFor(ModelItem => elem.nombre) </td>
+            <td>@Html.DisplayFor(ModelItem => elem.apellido) </td>
+            <td>@Html.DisplayFor(ModelItem => elem.edad) </td>
+            <td>@Html.DisplayFor(ModelItem => elem.talla) </td>
+            <td>@Html.DisplayFor(ModelItem => elem.sexo) </td>
+        </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>

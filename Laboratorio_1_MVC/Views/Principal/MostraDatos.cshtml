@@ -1,0 +1,29 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    
+    <title>MostrarDatos</title>
+</head>
+<body>
+    <div>
+        <h1>Laboratorio MVC - Web II</h1>
+        <br />
+        <div>Escuela: @ViewBag.Escuela</div>
+        <div>Curso: @ViewBag.Curso</div>
+        <div>Ciclo: @ViewBag.Ciclo</div>
+        <div>Docente: @ViewData["Docente"]</div>
+        <div>Estudiantes: @ViewData["Estudiante"]</div>
+        @Html.TextBox("Docente", ViewData["Docente"])
+        <br />
+        @Html.TextBox("Estudiantes", ViewData["Estudiante"])
+    </div>
+</body>
+</html>
+

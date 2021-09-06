@@ -1,0 +1,32 @@
+﻿@model Laboratorio_1_MVC.Models.ClsEstudiante
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        <h1><b>Informacion de estudiante</b></h1>
+        <br />
+        <div>
+            <label>DNI:</label>@Model.dni<br />
+            
+            <label>Apellidos</label>@Model.apellido<br />
+                                   
+            <label>Nombres:</label>@Model.nombre<br />
+
+            <label>Edad:</label>@Model.edad <br />
+                    
+            <label>Talla: </label>@Model.talla <br />
+                                                                               
+            <label>Sexo:</label> @Model.sexo <br />
+        </div>
+    </div>
+</body>
+</html>
